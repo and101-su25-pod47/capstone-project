@@ -1,6 +1,5 @@
 # capstone-project
 
-** test merge **
+** test push  **
 
-
-We love, pancakes. 
+We love pancakes
