@@ -19,7 +19,7 @@ import okhttp3.Headers
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var movieList: MutableList<Movie>  // Change here!
+    private lateinit var movieList: MutableList<Movie>
     private lateinit var rvMovies: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,46 +40,56 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchMoviePoster() {
         val client = AsyncHttpClient()
-        val url = "https://api.themoviedb.org/3/movie/popular?api_key=264f7145d4edb035e04f09b6191e7263"
+        val baseUrl = "https://api.themoviedb.org/3/movie/popular"
+        val apiKey = "" // TMDB API Key
+        val totalPages = 5
+        var pagesFetched = 0
 
-        client.get(url, object : JsonHttpResponseHandler() {
-            override fun onSuccess(
-                statusCode: Int,
-                headers: Headers?,
-                json: JsonHttpResponseHandler.JSON
-            ) {
-                Log.d("Movie", "response successful: $json")
+        // loop runs 5 times
+        for (page in 1..totalPages) {
+            val params = RequestParams()
+            params.put("api_key", apiKey)
+            params.put("page", page)
 
-                try {
-                    val resultsArray = json.jsonObject.getJSONArray("results")
+            client.get(baseUrl, params, object : JsonHttpResponseHandler() {
+                override fun onSuccess(
+                    statusCode: Int,
+                    headers: Headers?,
+                    json: JSON
+                ) {
+                    try {
+                        val resultsArray = json.jsonObject.getJSONArray("results")
+                        for (i in 0 until resultsArray.length()) {
+                            val movieObj = resultsArray.getJSONObject(i)
+                            val title = movieObj.getString("title")
+                            val posterPath = movieObj.getString("poster_path")
+                            val fullPosterUrl = "https://image.tmdb.org/t/p/w500$posterPath"
 
-                    for (i in 0 until resultsArray.length()) {
-                        val movieObj = resultsArray.getJSONObject(i)
-                        val title = movieObj.getString("title") // use "title" not "name"
-                        val posterPath = movieObj.getString("poster_path")
-                        val fullPosterUrl = "https://image.tmdb.org/t/p/w500$posterPath"
+                            val newMovie = Movie(title, fullPosterUrl)
+                            movieList.add(newMovie)
+                        }
 
-                        val newMovie = Movie(title, fullPosterUrl)
-                        movieList.add(newMovie)
+                        pagesFetched++
+                        if (pagesFetched == totalPages) {
+                            // After all pages are fetched, RecyclerView is set up
+                            val adapter = MovieAdapter(movieList)
+                            rvMovies.adapter = adapter
+                            rvMovies.layoutManager = GridLayoutManager(this@MainActivity, 2)
+                        }
+
+                    } catch (e: Exception) {
+                        Log.e("Movie Error", "JSON parsing error: ${e.message}")
                     }
-
-                    val adapter = MovieAdapter(movieList)
-                    rvMovies.adapter = adapter
-                    rvMovies.layoutManager = GridLayoutManager(this@MainActivity,2)
-
-                } catch (e: Exception) {
-                    Log.e("Movie Error", "JSON parsing error: ${e.message}")
                 }
-            }
 
-            override fun onFailure(
-                statusCode: Int,
-                headers: Headers?,
-                response: String?,
-                throwable: Throwable?
-            ) {
-                Log.d("Movie Error", "Failed with status $statusCode: $response")
-            }
-        })
-    }
-}
+                override fun onFailure(
+                    statusCode: Int,
+                    headers: Headers?,
+                    response: String?,
+                    throwable: Throwable?
+                ) {
+                    Log.e("Movie Error", "Failed page $page: $response")
+                }
+            })
+        }
+    }}
