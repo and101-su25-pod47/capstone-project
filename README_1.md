@@ -5,16 +5,16 @@
 
 Submitted by:
 - **Laiza Nicole Labiano**
-- **Team Member 2 Name Here**
-- **etc**
+- **Armando Galvan**
+- **Victor Googe**
 
-Time spent: **X** hours spent in total
+Time spent: **30** hours spent in total
 
 ## Summary
 
 This document provides an overview, project spec, and wireframes for our team's capstone project: An app that **allows user to visually track and organize their media. It displays each item, whether it be a movie, tv-show, or book, in a grid-like card style layout that displays its image, title, and status. Users are then allowed to bookmark certain pieces of media to add to their collection.**
 
-If we had to describe this milestone in three (3) emojis, they would be: **emojis here**
+If we had to describe this milestone in three (3) emojis, they would be: **🎬📖❤️**
 
 ## Milestone Requirements
 
