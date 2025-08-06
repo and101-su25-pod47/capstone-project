@@ -119,10 +119,14 @@ class BooksFragment : Fragment() {
                             val volumeInfo = bookObj.getJSONObject("volumeInfo")
                             val imageLinks = volumeInfo.optJSONObject("imageLinks")
 
+
+                            val rawImageUrl = imageLinks?.optString("thumbnail", "") ?: ""
+                            val imageUrl = rawImageUrl.replace("http://", "https://")
+
                             bookList.add(
                                 MediaItem(
-                                    title = volumeInfo.getString("title"),
-                                    imageUrl = imageLinks?.optString("thumbnail", "") ?: "",
+                                    title = volumeInfo.optString("title", "Untitled"),
+                                    imageUrl = imageUrl,
                                     author = volumeInfo.optJSONArray("authors")?.optString(0) ?: "Unknown Author",
                                     releaseDate = volumeInfo.optString("publishedDate", ""),
                                     popularity = bookObj.optDouble("averageRating", 0.0),
