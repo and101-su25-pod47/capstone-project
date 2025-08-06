@@ -1,10 +1,10 @@
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 <!--  Armando Added a comment to test out pushing to main repo --> 
 
-# AND101 Milestone 1 - **Team/App Name**
+# AND101 Milestone 1 - **Media Tracker**
 
 Submitted by:
-- **Team Member 1 Name Here**
+- **Laiza Nicole Labiano**
 - **Team Member 2 Name Here**
 - **etc**
 
@@ -12,7 +12,7 @@ Time spent: **X** hours spent in total
 
 ## Summary
 
-This document provides an overview, project spec, and wireframes for our team's capstone project: An app that **short description of your app**
+This document provides an overview, project spec, and wireframes for our team's capstone project: An app that **allows user to visually track and organize their media. It displays each item, whether it be a movie, tv-show, or book, in a grid-like card style layout that displays its image, title, and status. Users are then allowed to bookmark certain pieces of media to add to their collection.**
 
 If we had to describe this milestone in three (3) emojis, they would be: **emojis here**
 
@@ -22,23 +22,23 @@ If we had to describe this milestone in three (3) emojis, they would be: **emoji
 
 The following REQUIRED features are completed:
 
-- [ ] Creation of GitHub Organization and Group Project Repo
-- [ ] Updated Course Portal group info with Group Name and App Description
+- [x] Creation of GitHub Organization and Group Project Repo
+- [x] Updated Course Portal group info with Group Name and App Description
 
 The following REQUIRED files are included:
 
-- [ ] Included 📄 `brainstorming.md`, which contains:
-  - [ ] Our initial brainstorming ideas (6+ ideas)
-  - [ ] 5-category evaluation of our top 3 ideas
-  - [ ] Final app idea chosen
-- [ ] Included 📄 `project_spec.md`, which contains:
-  - [ ] App Overview: Description and evaluation
-  - [ ] App Spec: User features, Chosen API(s), User Interactions
-  - [ ] Wireframe image(s)
+- [x] Included 📄 `brainstorming.md`, which contains:
+  - [x] Our initial brainstorming ideas (6+ ideas)
+  - [x] 5-category evaluation of our top 3 ideas
+  - [x] Final app idea chosen
+- [x] Included 📄 `project_spec.md`, which contains:
+  - [x] App Overview: Description and evaluation
+  - [x] App Spec: User features, Chosen API(s), User Interactions
+  - [x] Wireframe image(s)
 
 The following BONUS features are implemented:
 
-- [ ] Added digital wireframe/mockup image(s)
+- [x] Added digital wireframe/mockup image(s)
 - [ ] Added a Video/GIF of an interactive prototype
 
 The following EXTRA features are implemented:

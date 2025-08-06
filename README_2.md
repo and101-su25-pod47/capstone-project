@@ -1,9 +1,9 @@
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 
-# AND101 Milestone 2 - **Team/App Name**
+# AND101 Milestone 2 - **Media Tracker**
 
 Submitted by:
-- **Team Member 1 Name Here**
+- **Laiza Nicole Labiano**
 - **Team Member 2 Name Here**
 - **etc**
 
@@ -11,7 +11,7 @@ Time spent: **X** hours spent in total
 
 ## Summary
 
-This document provides a summary of our project building process for our app, **App Name Here**
+This document provides a summary of our project building process for our app, **Media Tracker**
 
 ## Milestone Requirements
 
@@ -19,16 +19,16 @@ This document provides a summary of our project building process for our app, **
 
 The following REQUIRED features are completed:
 
-- [ ] Assign features to each member of your group
-- [ ] Establish a goal time for completing each feature
+- [x] Assign features to each member of your group
+- [x] Establish a goal time for completing each feature
 
 The following REQUIRED files are included:
 
-- [ ] Updated 📄 `project_spec.md`, which contains:
+- [x] Updated 📄 `project_spec.md`, which contains:
   - [X] App Overview (Milestone 1)
   - [X] App Spec (Milestone 1)
-  - [ ] Checked off 2+ completed features
-  - [ ] 2+ Videos/GIFs of build progress
+  - [x] Checked off 2+ completed features
+  - [x] 2+ Videos/GIFs of build progress
 
 - [ ] Our 🎥 Demo Video
   - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
