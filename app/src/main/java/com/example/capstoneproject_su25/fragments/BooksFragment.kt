@@ -101,7 +101,7 @@ class BooksFragment : Fragment() {
     private fun fetchBooks() {
         val client = AsyncHttpClient()
         val baseUrl = "https://www.googleapis.com/books/v1/volumes"  // Google Books API
-        val apiKey = "YOUR_GOOGLE_BOOKS_API_KEY"  // Replace with your actual API key
+        val apiKey = "AIzaSyB6pJ7WRg56x_-YENVMTpZocm35yYQaGWA"  // Replace with your actual API key
 
         for (page in 0 until totalPages) {  // Google Books uses startIndex instead of page
             val params = RequestParams()

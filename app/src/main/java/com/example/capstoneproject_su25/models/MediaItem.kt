@@ -9,5 +9,8 @@ data class MediaItem(
     val addedDate: String? = null,
     val author: String? = null,
     val releaseDate: String? = null,
-    val rating: Double = 0.0
+    val rating: Double = 0.0,
+
+    var isSaved: Boolean = false,
+    var isFavorite: Boolean = false
 )

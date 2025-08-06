@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <!-- Poster -->
         <ImageView
             android:id="@+id/img_poster"
             android:layout_width="match_parent"
@@ -17,40 +20,57 @@
             android:scaleType="centerCrop"
             android:contentDescription="Poster" />
 
-        <!-- Favorite button overlay -->
-        <ImageButton
-            android:id="@+id/btn_favorite"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="8dp"
-            android:src="@drawable/ic_heart"
-            android:background="@android:color/transparent"
-            android:contentDescription="Favorite"
-            app:tint="@color/red" />
-
+        <!-- Title & Icons Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/img_poster"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:baselineAligned="false">
 
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Title"
-                android:textStyle="bold"
-                android:paddingTop="4dp" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_status"
-                android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Media Title"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Release Date"
+                    android:textSize="12sp"
+                    android:textColor="#777777" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_favorite"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Status"
-                android:textSize="12sp"
-                android:textColor="#777777" />
+                android:src="@drawable/ic_heart"
+                android:background="@android:color/transparent"
+                android:contentDescription="Favorite"
+                app:tint="@color/red" />
+
+            <ImageButton
+                android:id="@+id/iv_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bookmark"
+                android:background="@android:color/transparent"
+                android:contentDescription="Bookmark"
+                app:tint="@color/black" />
         </LinearLayout>
-    </RelativeLayout>
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
+
