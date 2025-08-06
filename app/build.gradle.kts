@@ -36,8 +36,18 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.navigation.fragment.ktx.v253)
+    implementation(libs.androidx.navigation.ui.ktx.v253)
+
+    implementation(libs.material.v1110)
+
+    implementation(libs.androidx.navigation.fragment.ktx.v277)
+    implementation(libs.androidx.navigation.ui.ktx.v277)
+
     implementation("com.codepath.libraries:asynchttpclient:2.2.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     implementation(libs.androidx.core.ktx)

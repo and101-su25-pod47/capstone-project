@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/nav_movies">
+
+    <fragment
+        android:id="@+id/nav_movies"
+        android:name="com.example.capstoneproject_su25.fragments.MoviesFragment"
+        android:label="Movies" />
+
+    <fragment
+        android:id="@+id/nav_shows"
+        android:name="com.example.capstoneproject_su25.fragments.ShowsFragment"
+        android:label="Shows" />
+
+    <fragment
+        android:id="@+id/nav_books"
+        android:name="com.example.capstoneproject_su25.fragments.BooksFragment"
+        android:label="Books" />
+
+    <fragment
+        android:id="@+id/nav_collections"
+        android:name="com.example.capstoneproject_su25.fragments.CollectionsFragment"
+        android:label="Collections" />
+</navigation>

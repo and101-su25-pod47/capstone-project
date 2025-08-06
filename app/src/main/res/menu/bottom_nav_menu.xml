@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_movies"
+        android:icon="@drawable/ic_star"
+        android:title="Movies" />
+
+    <item
+        android:id="@+id/nav_shows"
+        android:icon="@drawable/ic_star"
+        android:title="Shows" />
+
+    <item
+        android:id="@+id/nav_books"
+        android:icon="@drawable/ic_star"
+        android:title="Books" />
+
+    <item
+        android:id="@+id/nav_collections"
+        android:icon="@drawable/ic_bookmark"
+        android:title="Collections" />
+
+</menu>
