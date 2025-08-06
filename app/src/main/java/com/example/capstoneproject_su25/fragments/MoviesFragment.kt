@@ -101,7 +101,7 @@ class MoviesFragment : Fragment() {
     private fun fetchMovies() {
         val client = AsyncHttpClient()
         val baseUrl = "https://api.themoviedb.org/3/movie/popular"
-        val apiKey = "eb6dd43ffb9137832e34d129da57f67a" // Replace with your actual API key
+        val apiKey = "YOUR_API_KEY" // Replace with your actual API key
 
         for (page in 1..totalPages) {
             val params = RequestParams()
