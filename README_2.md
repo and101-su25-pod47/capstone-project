@@ -4,10 +4,10 @@
 
 Submitted by:
 - **Laiza Nicole Labiano**
-- **Team Member 2 Name Here**
-- **etc**
+- **Armando Galvan**
+- **Victor Googe**
 
-Time spent: **X** hours spent in total
+Time spent: **30** hours spent in total
 
 ## Summary
 
@@ -30,8 +30,8 @@ The following REQUIRED files are included:
   - [x] Checked off 2+ completed features
   - [x] 2+ Videos/GIFs of build progress
 
-- [ ] Our 🎥 Demo Video
-  - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
+- [x] Our 🎥 Demo Video
+  - [x] We have also added the Demo Video Link to the Group Info Form on the course portal.
 
 The following EXTRA features are implemented:
 
@@ -39,11 +39,9 @@ The following EXTRA features are implemented:
 
 ## 🎥 Demo Video
 
-Here's a video that demos all of the app's implemented features:
+Here's a video that demos all of the app's implemented features: https://www.youtube.com/watch?v=THweMcBgbIU
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
-
-VIDEO created with **your chosen video tool**
+VIDEO created with **Zoom and clipchamp**
 
 ## Notes
 
